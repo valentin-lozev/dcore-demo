@@ -1,0 +1,1 @@
+# dcore demo - Retail Shop System

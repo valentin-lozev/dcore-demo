@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retail Shop | Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./styles/normalize.css">
+</head>
+<body class="w3-light-grey w3-content">
+
+	<nav id="main-nav" class="w3-sidenav w3-collapse w3-white w3-animate-left">
+		<br>
+		<a href="./index.html" class="w3-padding">HOME</a>
+	</nav>
+
+	<div id="main" class="w3-main">
+		<header class="w3-container">
+			<h1>Retail Shop</h1>
+			<div data-module="filter" class="w3-section w3-bottombar w3-padding-16">
+				<span class="w3-margin-right">Filter:</span>
+				<button class="w3-btn">ALL</button>
+				<button class="w3-btn">RED</button>
+				<button class="w3-btn">BLUE</button>
+				<button class="w3-btn">MOBILE</button>
+				<button class="w3-btn">ACCESSORY</button>
+			</div>
+			<div data-module="search" class="w3-section w3-bottombar w3-padding-16">
+				<input id="search_input" type="text" class="w3-input w3-border" placeholder="Search..." />
+			</div>
+			<div data-module="shopping-cart" class="w3-right">
+				<i class="fa fa-shopping-cart fa-3x"></i>
+				<ul></ul>
+			</div>
+		</header>
+
+		<div data-module="products-panel" class="w3-row-padding">
+		</div>
+	</div>
+
+	<script src="./scripts/extensions/module-query.js"></script>
+	<script src="./scripts/lib/dcore/dcore.umd.js"></script>
+	<script src="./scripts/app.js"></script>
+	<script src="./scripts/features/search/Search.js"></script>
+	<script src="./scripts/features/filter/Filter.js"></script>
+	<script src="./scripts/features/products-panel/ProductsPanel.js"></script>
+	<script src="./scripts/features/products-panel/View.js"></script>
+	<script src="./scripts/features/products-panel/Presenter.js"></script>
+	<script src="./scripts/features/products-panel/Product.js"></script>
+	<script src="./scripts/features/shopping-cart/ShoppingCart.js"></script>
+</body>
+</html>

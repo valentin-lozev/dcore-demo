@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "umd",
+		"sourceMap": false,
+		"noImplicitAny": false,
+		"noEmitOnError": true,
+		"removeComments": false
+
+	},
+	"compileOnSave": true
+}
