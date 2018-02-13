@@ -5,8 +5,8 @@
 		"sourceMap": false,
 		"noImplicitAny": false,
 		"noEmitOnError": true,
-		"removeComments": false
-
+		"removeComments": false,
+		"jsx": "react"
 	},
 	"compileOnSave": true
 }
