@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./scripts/lib/toastr/toastr.css" />
 	<link rel="stylesheet" href="./styles/normalize.css">
 </head>
 <body class="w3-light-grey w3-content">
@@ -18,14 +19,7 @@
 	<div id="main" class="w3-main">
 		<header class="w3-container">
 			<h1>Retail Shop</h1>
-			<div data-module="filter" class="w3-section w3-bottombar w3-padding-16">
-				<span class="w3-margin-right">Filter:</span>
-				<button class="w3-btn">ALL</button>
-				<button class="w3-btn">RED</button>
-				<button class="w3-btn">BLUE</button>
-				<button class="w3-btn">MOBILE</button>
-				<button class="w3-btn">ACCESSORY</button>
-			</div>
+			<div data-module="filter" class="w3-section w3-bottombar w3-padding-16"></div>
 			<div data-module="search" class="w3-section w3-bottombar w3-padding-16">
 				<input id="search_input" type="text" class="w3-input w3-border" placeholder="Search..." />
 			</div>
@@ -39,10 +33,19 @@
 		</div>
 	</div>
 
+	<script src="http://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
 	<script src="./scripts/extensions/module-query.js"></script>
+	<script src="./scripts/extensions/module-view.js"></script>
+	<script src="./scripts/extensions/notifier.js"></script>
+	<script src="./scripts/lib/toastr/toastr.js"></script>
 	<script src="./scripts/lib/dcore/dcore.umd.js"></script>
 	<script src="./scripts/app.js"></script>
 	<script src="./scripts/features/search/Search.js"></script>
+	<script src="./scripts/features/filter/FilterView.js"></script>
 	<script src="./scripts/features/filter/Filter.js"></script>
 	<script src="./scripts/features/products-panel/ProductsPanel.js"></script>
 	<script src="./scripts/features/products-panel/View.js"></script>

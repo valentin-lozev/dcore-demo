@@ -1,29 +1,35 @@
 class Filter implements dcore.Module {
 
+	private view: FilterView;
+
 	constructor(public sandbox: dcore.Sandbox) {
 		this.filterProducts = this.filterProducts.bind(this);
 	}
 
 	init(): void {
-		let filters = this.sandbox.root.querySelectorAll('button');
-		for (let i = 0; i < filters.length; i++) {
-			filters[i].addEventListener('click', this.filterProducts);
-		}
-
+		this.view = this.sandbox.mountView(FilterView, {
+			filterProducts: this.filterProducts
+		});
+		this.view.changeFilters([
+			"ALL",
+			"RED"
+		]);
 	}
 
 	destroy(): void {
-		let filters = this.root.querySelectorAll('button');
-		for (let i = 0; i < filters.length; i++) {
-			filters[i].removeEventListener('click', this.filterProducts);
-		}
 	}
 
-	filterProducts(ev: Event): void {
-		const button = ev.currentTarget as HTMLButtonElement;
+	filterProducts(filter: string): void {
 		this.sandbox.publishAsync({
 			type: 'change-filter',
-			filter: button.textContent
+			filter: filter
 		});
+	}
+
+	changeFilters(): void {
+		this.view.changeFilters([
+			"ALL",
+			"BLUE"
+		]);
 	}
 }

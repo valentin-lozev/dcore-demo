@@ -23,6 +23,8 @@ class ShoppingCart implements dcore.Module {
 
 	moduleDidReceiveMessage(msg: dcore.Message) {
 		const product: Product = msg["product"];
+		this.sandbox.success(`Product added: ${product.name}`);
+
 		let entry = document.querySelector('#cart-' + product.id + ' .quantity');
 		if (entry) {
 			entry.innerHTML = (parseInt(entry.innerHTML) + 1).toString();

@@ -3,7 +3,6 @@ declare namespace dcore {
 	const app: dcore.Core;
 }
 
-
 const startAll = () => {
 	[].forEach.call(
 		document.querySelectorAll("[data-module]"),
@@ -21,7 +20,9 @@ const startAll = () => {
 
 const app = new dcore.DCore();
 app.use([
-	moduleQuery()
+	moduleQuery(),
+	notifier(),
+	moduleView()
 ]);
 
 app.init(() => {

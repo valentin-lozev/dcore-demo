@@ -1,6 +1,4 @@
 ﻿# User-specific files
-scripts/**/*.js
-scripts/**/*.js.map
 
 # Visual Studio 2015 cache/options directory
 .vs/
